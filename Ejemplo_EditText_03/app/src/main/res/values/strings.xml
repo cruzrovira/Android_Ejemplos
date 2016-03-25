@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejemplo_EditText_03</string>
+    <string name="action_settings">Settings</string>
+    <string name="lblNombre">Escribe tu nombre</string>
+    <string name="txtNombre">Oscar Rovira</string>
+    <string name="btnEnviar">Enviar</string>
+</resources>
