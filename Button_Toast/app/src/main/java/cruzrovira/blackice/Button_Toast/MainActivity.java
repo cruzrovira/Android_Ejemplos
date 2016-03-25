@@ -1,5 +1,7 @@
-package cruzrovira.blackice.ejemplo_Ejemplo_TextView_01;
 
+package cruzrovira.blackice.Button_Toast;
+
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,13 +11,17 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    // Denificion de elementos de la vista
+// implementamos interfas  View.OnClickListener que es necasria para la captura
+// de los eventos de los button
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+   // variables  para el manejo del contexto
+    Context context = this;
+    // variabels para la creacion de buttons
+    Button btn1 ,btn2;
 
-    TextView lblDatos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +29,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        lblDatos = (TextView) findViewById(R.id.lblDato);
-        lblDatos.setText("DAtos ingresados desde el activite java");
+        btn1 =(Button) findViewById(R.id.btn1);
+        btn2=(Button) findViewById(R.id.btn2);
 
+        // suscripcion a los eventos de los boton
+        // de no estar  inscrito al menjador del evento , la funcion click
+        // de dicho button no funcionaria
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -58,5 +69,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    // importante esta funcion captura todos los eventos de button suscritos a este evento
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn1:  // cada calse indica el evento clik de cada button
+                Toast.makeText(context,"se preciono el button 1", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn2:
+                Toast.makeText(context,"se preciono el button 2", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }
