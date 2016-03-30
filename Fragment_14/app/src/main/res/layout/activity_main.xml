@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="fragment_14.cruzrovira.blackice.MainActivity">
+
+    <fragment
+        android:id="@+id/fragmenta"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        class="fragment_14.cruzrovira.blackice.FragmentA"
+        />
+    <fragment
+        android:id="@+id/fragmentb"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        class="fragment_14.cruzrovira.blackice.FragmentB"
+        />
+
+
+</LinearLayout>
