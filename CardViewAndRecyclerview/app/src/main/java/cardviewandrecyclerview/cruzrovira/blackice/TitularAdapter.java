@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class TitularAdapter extends RecyclerView.Adapter<TitularAdapter.TitularV
         return titulares.size();
     }
 
-    public  static class TitularViewHolder extends RecyclerView.ViewHolder {
+    public  static class TitularViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private ImageView imageView;
         private TextView tvTitulo;
         private  TextView tvContenido;
@@ -50,6 +51,16 @@ public class TitularAdapter extends RecyclerView.Adapter<TitularAdapter.TitularV
             imageView =(ImageView) itemView.findViewById(R.id.imageview);
             tvTitulo=(TextView) itemView.findViewById(R.id.tvTitulo);
             tvContenido =(TextView) itemView.findViewById(R.id.tvContenido);
+            tvTitulo.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.tvTitulo:
+                    Toast.makeText(v.getContext(),"se preciono " +tvTitulo.getText(),Toast.LENGTH_SHORT).show();
+                    break;
+            }
         }
     }
 }
