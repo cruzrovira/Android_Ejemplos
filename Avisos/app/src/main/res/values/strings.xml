@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Avisos</string>
+    <string name="nuevo_aviso">Nuevo aviso</string>
+    <string name="salir">Salir</string>
+</resources>

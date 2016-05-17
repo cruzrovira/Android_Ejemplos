@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">"TextInputLayout "</string>
+    <string name="hit_nombre">Nombre</string>
+    <string name="hint_telefono">Telefono</string>
+    <string name="hint_correo">Correo</string>
+    <string name="accion_cancelar">Cancelar</string>
+    <string name="accion_aceptar">Aceptar</string>
+    <string name="hint_asunto">Asunto</string>
+</resources>
