@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/configuracion"
+            android:title="Configuracion"
+            android:icon="@drawable/icon"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/seguridad"
+            android:title="Seguridad"
+            android:icon="@drawable/icon"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/apps"
+            android:title="Apps"
+            android:icon="@drawable/icon"
+            android:checked="false"
+            />
+
+
+    </group>
+
+</menu>
